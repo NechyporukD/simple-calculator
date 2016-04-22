@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+
+	<!-- Fonts -->
+	<!-- Lato -->
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="calculator-wrapper">
+	<form action="#" method="post" class="calculator">
+		<!-- Show result -->
+		<fieldset>
+			<input id="result" class="calculator__output" value="0" readonly  maxlength="9">
+		</fieldset>
+
+		<main class="calcutalor__body">
+			<!-- Arithmetic function -->
+			<fieldset class="calculator__aside">
+				<button class="calculator__btn" onclick="divide(event)">&#247;</button>
+				<button class="calculator__btn" onclick="multiply(event)">&#215;</button>
+				<button class="calculator__btn" onclick="subtract(event)">-</button>
+				<button class="calculator__btn" onclick="add(event)">+</button>
+				<button class="calculator__btn calculator__btn--high" onclick="equal(event)">=</button>
+			</fieldset>
+
+			<!-- Memory function -->
+			<fieldset>
+				<button class="calculator__btn calculator__btn--sm" onclick="memory_add(event)">m+</button>
+				<button class="calculator__btn calculator__btn--sm" onclick="memory_subtract(event)">m-</button>
+				<button class="calculator__btn calculator__btn--sm" onclick="memory_recall(event)">mr</button>
+				<button class="calculator__btn calculator__btn--sm" onclick="memory_clear(event)">mc</button>
+			</fieldset>
+
+			<!-- Numbers -->
+			<fieldset>
+				<div class="calculator__row">
+					<button class="calculator__btn calculator__number">7</button>
+					<button class="calculator__btn calculator__number">8</button>
+					<button class="calculator__btn calculator__number">9</button>
+				</div>
+				<div class="calculator__row">
+					<button class="calculator__btn calculator__number">4</button>
+					<button class="calculator__btn calculator__number">5</button>
+					<button class="calculator__btn calculator__number">6</button>
+				</div>
+				<div class="calculator__row">
+					<button class="calculator__btn calculator__number">1</button>
+					<button class="calculator__btn calculator__number">2</button>
+					<button class="calculator__btn calculator__number">3</button>
+				</div>
+				<div class="calculator__row">
+					<button class="calculator__btn calculator__number">0</button>
+					<button class="calculator__btn calculator__number">.</button>
+					<button class="calculator__btn calculator__clean" onclick="clean(event)">c</button>
+				</div>
+			</fieldset>
+		</main>
+	</form>
+	</div>
+
+  	<script src="js/application.js"></script>
+</body>
+</html>
